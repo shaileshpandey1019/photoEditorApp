@@ -1,0 +1,67 @@
+{
+  "expo": {
+    "name": "Photo Collage Maker",
+    "slug": "photo-collage-maker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "newArchEnabled": false,
+      "supportsTablet": true,
+      "bundleIdentifier": "com.photocollage.om",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Photo Collage Maker needs access to your photo library to create beautiful collages.",
+        "NSPhotoLibraryAddUsageDescription": "Photo Collage Maker needs permission to save your creations to your photo library.",
+        "NSCameraUsageDescription": "Photo Collage Maker needs camera access to take photos for your collages."
+      }
+    },
+    "android": {
+    
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.photocollage.app",
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "CAMERA",
+        "READ_MEDIA_IMAGES"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-splash-screen",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Photo Collage Maker needs access to your photo library to create beautiful collages.",
+          "cameraPermission": "Photo Collage Maker needs camera access to take photos for your collages."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Photo Collage Maker needs permission to save your creations to your photo library.",
+          "savePhotosPermission": "Photo Collage Maker needs permission to save your creations to your photo library."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "scheme": "photocollage"
+  }
+}
